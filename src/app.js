@@ -28,23 +28,9 @@ var circ = new UI.Circle({
   backgroundColor: 'white'
 });
 
-var minBar = new UI.Rect({
-  position: new Vector2(0,0),
-  size: new Vector2(144,12),
-  backgroundColor: 'white',
-});
-
-var hourBar = new UI.Rect({
-  position: new Vector2(0,156),
-  size: new Vector2(144,12),
-  backgroundColor: 'white'
-});
-
 // Add the elements to the mainFace window, with specific ordering
 mainFace.add(circ);
 mainFace.add(theTime);
-mainFace.add(minBar);
-mainFace.add(hourBar);
 
 // Display window to user
 mainFace.show();
@@ -61,8 +47,8 @@ function updateMins() {
   var minHand = new UI.Rect({
     position: new Vector2(pos1,0),
     size: new Vector2(2,12),
-    color: 'black',
-    backgroundColor: 'black'
+    color: 'white',
+    backgroundColor: 'white'
   });
   setInterval(removeMins,1000);
   function removeMins() {
@@ -78,8 +64,8 @@ function updateHours() {
   var hourHand = new UI.Rect({
     position: new Vector2(pos2,156),
     size: new Vector2(2,12),
-    color: 'black',
-    backgroundColor: 'black'
+    color: 'white',
+    backgroundColor: 'white'
   });
   setInterval(removeHours,1000);
   function removeHours() {
