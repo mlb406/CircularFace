@@ -4,7 +4,7 @@
         ""
     ],
     "companyName": "Max Beckett",
-    "longName": "Circular",
+    "longName": "CircularPlus",
     "projectType": "pebblejs",
     "resources": {
         "media": [
@@ -31,7 +31,8 @@
             }
         ]
     },
-    "shortName": "Circular",
+    "sdkVersion": "3",
+    "shortName": "Circular+",
     "uuid": "7fe73523-7af2-4c45-b1c4-da3be830466d",
     "versionCode": 1,
     "versionLabel": "1.0",
