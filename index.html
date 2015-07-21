@@ -10,7 +10,10 @@
     $(function() {
       $(".item-button").click(function() {
         var top_analogue = document.getElementById("top_analogue").checked;
-        $("#test").html("<p>Top analogue checked <strong>" + top_analogue + "</strong></p>");
+        var bottom_analogue = document.getElementById("bottom_analogue").checked;
+        var date_toggle = document.getElementById("date_toggle").checked;
+        var options = { top: top_analogue, bottom: bottom_analogue, date: date_toggle };
+        $("#test").html("<p>" + options + "</p>");
       });
       
     });
