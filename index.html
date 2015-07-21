@@ -13,7 +13,7 @@
         var bottom_analogue = document.getElementById("bottom_analogue").checked;
         var date_toggle = document.getElementById("date_toggle").checked;
         var options = { top: top_analogue, bottom: bottom_analogue, date: date_toggle };
-        $("#test").html("<p>" + options + "</p>");
+        $("#test").html("<p>" + JSON.stringify(options) + "</p>");
       });
       
     });
