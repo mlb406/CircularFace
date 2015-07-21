@@ -8,16 +8,26 @@
   
   <body>
     <div class="item-container">
-     <div class="item-container-header">Single Item</div>
-     <div class="item-container-content">
+     <div class="item-container-header">Multiple Items</div>
+      <div class="item-container-content">
+       <label class="item">
+         Example Item
+          <input type="checkbox" class="item-toggle" name="toggle-2" checked>
+       </label>
         <label class="item">
-         <input type="checkbox" class="item-toggle" name="toggle-1" checked>
-        </label>
-      </div>
-      <div class="item-container-footer">
-        Enable the top analogue bar.
+          Example Item
+          <input type="checkbox" class="item-toggle" name="toggle-3">
+       </label>
+        <label class="item">
+       Example Item
+      <select name="select-1" dir='rtl' class="item-select">
+       <option class="item-select-option">Both</option>
+       <option class="item-select-option" selected>Major only</option>
+        <option class="item-select-option">Minor only</option>
+       </select>
+    </label>
      </div>
-    </div>
+</div>
   </body>
   
 </html>
