@@ -10,11 +10,7 @@
     $(function() {
       $(".item-button").click(function() {
         var top_analogue = document.getElementById("top_analogue").checked;
-        if (top_analogue == true) {
-          $("#test").html("<p>Top analogue is <strong>checked</strong></p>");
-        } else {
-          $("#test").html("<p>Top analogue is <strong>unchecked</strong></p>");
-        }
+        $("#test").html("<p>Top analogue checked <strong>" + top_analogue + "</strong></p>");
       });
       
     });
