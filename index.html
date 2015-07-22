@@ -9,10 +9,11 @@
     <script>
     $(function() {
       $(".item-button").click(function() {
-        var top_analogue = document.getElementById("top_analogue").checked;
-        var bottom_analogue = document.getElementById("bottom_analogue").checked;
-        var date_toggle = document.getElementById("date_toggle").checked;
-        var options = { top: top_analogue, bottom: bottom_analogue, date: date_toggle };
+        var top_analogue = $("top_analogue").val();
+        var bottom_analogue = $("bottom_analogue").val();
+        var date_toggle = $("date_toggle").val();
+        var date_format = $("date_format").val();
+        var options = { bars: { top: top_analogue, bottom: bottom_analogue }, date: { on: date_toggle, format: date_format } };
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
       });
       
@@ -46,7 +47,7 @@
         </label>
         <label class="item">
           Date format
-          <select name="select-1" class="item-select">
+          <select id="date_format" class="item-select">
             <option class="item-select-option" value="DDMMYY" selected>DD-MM-YY</option>
             <option class="item-select-option" value="MMDDYY">MM-DD-YY</option>
           </select>
