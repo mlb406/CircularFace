@@ -9,10 +9,10 @@
     <script>
     $(function() {
       $(".item-button").click(function() {
-        var top_analogue = $("top_analogue").val();
-        var bottom_analogue = $("bottom_analogue").val();
-        var date_toggle = $("date_toggle").val();
-        var date_format = $("date_format").val();
+        var top_analogue = $("#top_analogue").prop("checked");
+        var bottom_analogue = $("#bottom_analogue").prop("checked");
+        var date_toggle = $("#date_toggle").prop("checked");
+        var date_format = $('#date_format').find(":selected").text();
         var options = { bars: { top: top_analogue, bottom: bottom_analogue }, date: { on: date_toggle, format: date_format } };
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
       });
