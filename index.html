@@ -9,11 +9,10 @@
     <script>
     $(function() {
       $(".item-button").click(function() {
-        var top_analogue = $("#top_analogue").prop("checked");
-        var bottom_analogue = $("#bottom_analogue").prop("checked");
+        var ana_bars = $("#analogueBars").prop("checked");
         var date_toggle = $("#date_toggle").prop("checked");
         var date_format = $('#date_format').find(":selected").text();
-        var options = { bars: { top: top_analogue, bottom: bottom_analogue }, date: { on: date_toggle, format: date_format } };
+        var options = { bars: { on: ana_bars }, date: { on: date_toggle, format: date_format } };
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
       });
       
@@ -28,18 +27,14 @@
      <div class="item-container-header">Options</div>
       <div class="item-container-content">
         <label class="item">
-          Top analogue
-          <input type="checkbox" class="item-toggle" name="top-analogue" id="top_analogue" checked>
-        </label>
-        <label class="item">
-          Bottom analogue
-          <input type="checkbox" class="item-toggle" name="bottom-analogue" id="bottom_analogue" checked>
+          Analogue bars
+          <input type="checkbox" class="item-toggle" name="analogue_bars" id="analogueBars" checked>
         </label>
       </div>
       <div class="item-container-footer">
         Enables the analogue bars at the top and bottom of the screen.
         Disabling them will slightly increase battery life.
-        When changing these settings, the app will require a restart.
+        When changing this setting, the app will require a restart.
       </div>
       <div class="item-container-content">
         <label class="item">
