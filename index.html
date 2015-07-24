@@ -11,7 +11,7 @@
       $(".item-button").click(function() {
         var ana_bars = $("#analogueBars").prop("checked");
         var date_toggle = $("#date_toggle").prop("checked");
-        var date_format = $('#date_format').find(":selected").text();
+        var date_format = $('#date_format').find(":selected").val();
         var options = { bars: { on: ana_bars }, date: { on: date_toggle, format: date_format } };
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
       });
@@ -46,10 +46,14 @@
           <select id="date_format" class="item-select">
             <option class="item-select-option" value="DDMMYY" selected>DD-MM-YY</option>
             <option class="item-select-option" value="MMDDYY">MM-DD-YY</option>
+            <option class="item-select-option" value="DDDDMMMYY">DDD Dd MMM YY (words)</option>
+            <option class="item-select-option" value="DDDMMMDYY">DDD MMM Dd YY (words)</option>
           </select>
         </label>
       </div>
-      
+      <div class="item-container-footer">
+        In the last two options, the date would appear as "THU 1 JAN 70" or "FRI JUL 24 15" respectively.
+      </div>
     </div>
     <div class="item-container">
       <div class="item-container-header">Support</div>
