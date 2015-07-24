@@ -12,6 +12,7 @@
         var ana_bars = $("#analogueBars").prop("checked");
         var date_toggle = $("#date_toggle").prop("checked");
         var date_format = $('#date_format').find(":selected").val();
+        console.log(date_format);
         var options = { bars: { on: ana_bars }, date: { on: date_toggle, format: date_format } };
         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
       });
