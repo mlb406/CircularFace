@@ -14,6 +14,7 @@
         var date_format = $('#date_format').find(":selected").val();
         console.log(date_format);
         var options = { bars: { on: ana_bars }, date: { on: date_toggle, format: date_format } };
+        console.log(JSON.stringify(options));
         
         document.location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));  
       });
