@@ -1,5 +1,44 @@
 <!DOCTYPE html>
 <html>
-
+  <link href="slate-master/dist/css/slate.css" rel="stylesheet">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="slate-master/dist/js/slate.js"></script>
+    <script>
+      function getOptions() {
+        var animate = $("#animate").val();
+        console.log(animate);
+        localStorage.setItem(0, animate);
+        var options = {
+          "animate" = animate
+        };
+      }
+      
+      $(function() {
+        if (localStorage.getItem(0)) {
+          $("#animate").val(localStorage.getItem(0));
+        }
+        $("#submit").click(function() {
+          getOptions();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="item-container">
+      <div class="item-container-header">Circular+ v2 Options</div>
+      <div class="item-container-content">
+        <label class="item">
+          Animate on shake (requires restart)
+          <input type="checkbox" class="item-toggle" id="animate" checked>
+        </label>
+      </div>
+      <div class="item-container-footer">
+        Customisable options for Circular+ v2.<br>
+        Disabling/enabling animation will require the app to restart. 
+      </div>
+    </div>
+    <input type="button" class="item-button" value="SUBMIT" id="submit">
+  </body>
 
 </html>
